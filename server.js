@@ -46,6 +46,13 @@ app.get('/about', (req, res) => {
 	});
 });
 
+app.get('/profile', (req, res) => {
+	res.render('profile.hbs', {
+		pageTitle: 'Profile Page',
+		message: 'This is my profile page...'
+	});
+});
+
 app.get('/bad', (req, res) => {
 	res.send({
 		errorCode: 500,
